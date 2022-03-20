@@ -1,0 +1,128 @@
+.Mypage{
+    margin-top:55px;
+    height:900px;
+}
+
+/* 색상 */
+.text-yellow{
+    color: #ffd429 !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*mypage*/
+
+
+.member_info{
+    text-align: center;
+    background: black;
+    height:300px;
+}
+.member_info .grade > h3 > span {
+    color:white;
+}
+
+.member_info .deli{
+
+}
+.member_info .deli .deli_box{
+    position: relative;
+    /*width: 200px;*/
+    height: 100px;
+    display: inline-block;
+}
+
+.member_info .deli .deli_box .deli_day{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: white;
+    z-index: 1;
+    line-height: 1;
+    text-align: center;
+    width: 120px;
+    margin-top: -20px;
+    margin-left: -60px;
+    font-size: 14px;
+}
+.member_info .deli .deli_box .deli_day big{
+    color:white;
+}
+
+.log_text{
+    font-size:18px;
+    color:white;
+}
+
+.log_text > *{
+    color:white;
+}
+
+
+
+/* 누적 배송 일수 하단 숫자*/
+.member_info .deli .deli_box .deli_day big{
+    text-align: center;
+    font-size: 23px;
+    margin-top: 10px;
+    font-weight: 600;
+    display: block;
+    margin-top: 4px;
+}
+
+
+
+
+
+
+.middle_box {
+    padding: 15px !important;
+}
+
+.middle_box_border {
+    border: 1px solid #e2e2e2;
+}
+
+.main_title {
+    padding: 0 0 10px !important;
+    margin: 18px 15px 10px !important;
+    border-bottom: 1px solid #e2e2e2 !important;
+}
+
+
+
+
+/* 주문한 식단 상자 */
+.food_con {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-bottom: 10px !important;
+}
+.food_list {
+    padding: 50px 0 !important;
+    text-align: center !important;
+    box-shadow: none !important;
+    border: 1px solid #e2e2e2;
+    color: #c0c0c0 !important;
+}
+
+
+
+
+
+
+.list .item > a {
+    display: block;
+    position: relative;
+    color: #3d3d3d;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #e2e2e2 !important;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}

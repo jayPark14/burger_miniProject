@@ -1,0 +1,358 @@
+
+
+.cart_icon{
+    font-size:26px;
+}
+
+
+
+
+/* 하단 네비바 */
+.navigation_wrap{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 999;
+}
+.navigation{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    height: 67px;
+    max-width: 640px;
+    margin: 0 auto;
+
+    background-color: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* 네비 누르면 효과 */
+
+.navigation > a{
+    height: 67px;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+}
+.navigation > a:hover, .navigation > a:focus, .navigation > a:active{
+    text-decoration: none !important;
+}
+.navigation > a.active{
+    opacity: 1;
+}
+
+.navigation >  div{
+    display: flex;
+    opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.navigation > div > div > span{
+    line-height: 1;
+    font-size: 12px;
+    letter-spacing: -0.6px;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.navigation > a > div > span{
+    line-height: 1;
+    font-size: 12px;
+    letter-spacing: -0.6px;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+
+/* 상단 레이아웃 */
+.index-container, #hd_wr {max-width:640px;margin: 0px auto;}
+/* 슬라이드메뉴 사이즈 제한 */
+#slide_menu {max-width:400px;}
+
+#hd {position:relative;}
+#hd h1 {position:absolute;font-size:0;text-indent:-9999rem;line-height:0;overflow:hidden}
+#hd_wr{
+    position:fixed;
+    padding: 0;
+    background:#FFF;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    height: 55px;
+    box-shadow: 0px 2px 3px 0 rgba(32, 32, 32, 0.1);
+}
+#hd_wr.shadow {
+    box-shadow: 0 3px 2px rgba(0,0,0,0.2);
+}
+#hd_wr + .blank {height: 55px;}
+#hd_wr ._inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#hd_wr ._inner > *{
+    flex: 1;
+    text-align: center;
+    position: relative;
+    line-height: 1;
+}
+#hd_wr ._inner > ._left{
+    text-align: left;
+    height: 26px;
+    flex: 1;
+    order: 3;
+    margin-left: 15px;
+}
+#hd_wr ._inner > ._center{
+    font-size:20px;
+    text-align: left;
+    flex: 10;
+    order: 1;
+}
+#hd_wr ._inner > ._right{
+    text-align: right;
+    height: 26px;
+    flex: 1;
+    order: 2;
+}
+
+#hd_wr ._inner #logo img{
+    height: 21px;
+}
+
+/*#hd_wr ._inner .side_btn {*/
+/*    !*background-image: url('/theme/5am/img/mobile/category_icon2.png?v=22');*!*/
+/*    background-image: url('/img/navigation_category.svg');*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 24px;*/
+/*    background-position: center;*/
+/*    width: 26px;*/
+/*    height: 26px;*/
+/*    display: inline-block;*/
+/*}*/
+
+#hd_wr ._inner .icon-cart {
+    /*background-image: url('/theme/5am/img/mobile/cart.png?v=22');*/
+    /*background-image: url('/img/navigation_cart.svg');*/
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+}
+
+#hd_wr ._inner .cart-count {
+    position: absolute;
+    background: #43dc37;
+    height: 15px;
+    width: 15px;
+    line-height: 16px;
+    border-radius: 15px;
+    color: #3a5e4e;
+    display: block;
+    text-align: center;
+    top: -2px;
+    right: -4px;
+}
+
+#hd_wr ._inner .cart-count p {
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: -1px;
+}
+
+
+    /* 사이드바 */
+.container {
+    background-color: black;
+}
+
+.sidebar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.2s ease;
+    color: #202020;
+    height: 100%;
+    z-index: 1000;
+    border-right:1px solid #d3d3d3;
+}
+
+.sidebar_btn {
+    margin : 80px 40px 0 40px;
+}
+
+.sb_btn1, .sb_btn3 {
+    border: 1px solid black;
+    width: 155px;
+    background-color: white;
+    
+}
+
+.sb_btn2, .sb_btn4 {
+    width: 155px;
+    background-color: black;
+}
+
+.button {
+    position: relative;
+    left: 330px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    z-index: 99;
+    transition: 0.8s ease;
+    border: 2px solid #202020;
+    border-radius: 40px;
+    overflow: hidden;
+}
+.openBtn {
+    width: 100%;
+    height: 100%;
+}
+.content {
+    padding: 40px 40px 0 20px;
+    position: relative;
+    width: 100%;
+}
+.icon {
+    margin: 0;
+    color: #202020;
+}
+
+
+
+
+
+
+
+.mx-0{margin-left: 0px !important; margin-right: 0px !important;}
+.pa-15{padding: 15px !important;}
+.px-15{padding-left: 15px !important; padding-right: 15px !important;}
+
+.btn.btn-lg,
+.btn-block.bold{
+    font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+ /*accordian*/
+.card-header{
+    background-color: transparent;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 0;
+    line-height: 1;
+}
+.card-header > a{
+    padding: 15px 10px;
+    line-height: 1;
+    display: block;
+}
+.card-body{
+    padding: 10px;
+}
+
+
+.page_cover.open {
+    display: block;
+    overflow: hidden;
+}
+
+
+.page_cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+}
+
+
+
+
+
+
+.member_hd{
+    margin-top:14px;
+    /*text-align: center;*/
+    padding-left: 100px;
+    background: black;
+    height:135px;
+}
+.member_hd .grade > span {
+    color: #0bff0b;
+}
+
+.member_hd .deli{
+
+}
+.member_hd .deli .deli_box{
+    position: relative;
+    /*width: 100px;*/
+    /*height: 50px;*/
+    display: inline-block;
+}
+
+.member_hd .deli .deli_box .deli_day{
+    /*top: 50%;*/
+    color: white;
+    width: 120px;
+    /*margin-top: -20px;*/
+    font-size: 14px;
+}
+.log_txt{
+    font-size:14px;
+    color:white;
+}
+.log_txt > *{
+    font-size:20px;
+    color:white;
+}
+
+
+
+
+
+/* 슬라이드메뉴 로그인 유무에 따라 출력(클래스 추가) */
+.change_menu > ._section {
+    display: none;
+}
+
+.change_menu > ._section.active {
+    display: block;
+}
+
+
+
+
+
+/* 슬라이드메뉴 부트스트랩 아코디언 색상 변경*/
+.panel-header button {
+    border: none;
+    background: transparent;
+}
+.panel-header button:focus {
+    background-color: white;
+    outline: 0px auto -webkit-focus-ring-color;
+    border:none;
+}

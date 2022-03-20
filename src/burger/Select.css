@@ -1,0 +1,91 @@
+.date_cont {
+    margin-top: 100px;
+    height:1500px;
+}
+
+.normal-day {
+    background: white !important;
+    color: black !important;
+    width: 28px;
+    height: 28px;
+    line-height: 1.8;
+    text-align: center;
+    padding: 2px !important;
+}
+
+.selected-day {
+    background: #000000 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    font-weight: 700;
+}
+
+.menu_select{
+    display: flex;
+}
+
+.cal_btn{
+    background-color: black;
+    border:1px solid;
+    width: 100px;
+    text-align: center;
+    margin-right:280px;
+}
+
+.cal_btn :after{
+    background-color: black;
+}
+
+
+.select_cart_btn{
+    background-color: black;
+    border:1px solid;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    float:right;
+    margin: 15px;
+}
+
+
+.sl_btn {
+    border-radius: 5px;
+    color:white;
+    background-color: black;
+    width: 50px;
+    margin: -2px 20px 0px 0px;
+    float:right;
+}
+
+.sl_btn_box > div{
+    /*background-color: red;*/
+    margin : 25px 0 0 20px;
+}
+
+
+.sl_item{
+    border:1px solid rgba(0, 0, 0, 0.2);
+    width:250px;
+    height:300px;
+}
+
+.sl_item_image{
+    margin: 20px 50px 0 50px;
+    background-color: white;
+    width:200px;
+    height:200px;
+}
+
+.item_line{
+    display: flex;
+}
+
+.sl_left{
+    flex:1;
+    margin: 10px;
+}
+
+.sl_right{
+    flex:1;
+    margin:10px;
+}

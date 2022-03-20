@@ -1,0 +1,189 @@
+
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    /* 목록의 점 삭제 */
+    list-style:none;
+    /* 링크 줄,색 삭제 */
+    text-decoration: none;
+    /* 테이블 떨어진거 붙이기 */
+    border-collapse:collapse;
+    /* 기본 마진,패딩 삭제 */
+    margin:0px;
+    padding:0px;
+    /* 기본 폰트 색상 */
+    color:black;
+}
+
+.home_wrap{
+}
+
+
+/*.slide_box{*/
+/*    margin-top:55px;*/
+/*    width:640px;*/
+/*    height:360px;*/
+/*    background-color: #868181;*/
+/*}*/
+
+.banner{
+    margin-top:55px;
+    background-color: #000000;
+    height:360px;
+    width: 640px;
+}
+
+
+/*.home_bottom{*/
+/*    position: relative;*/
+/*    width: 100%;*/
+/*}*/
+
+
+
+.remaining_time_box{
+    /*display: flex;*/
+    background-image: url("./image/deli.jpg");
+    margin-top:10px;
+    width:640px;
+    height: 152px;
+    /*background-color: #f2f2f2;*/
+}
+
+.remaining_time_box> a > big {
+    margin : 10px 0 0 10px;
+}
+.remaining_time_box> a > b {
+    margin : 10px 0 0 10px;
+}
+
+
+.remain_anne{
+    margin: 20px 0 0 15px;
+    text-align: center;
+    padding: 4px;
+    border:1px solid;
+    width: 100px;
+}
+
+
+
+.remaining_time_box > * {
+    color:black;
+}
+
+.remaining_time_box > a> big{
+    font-size:21px;
+}
+
+
+.remaining_time_box > a > b{
+    font-size:23px;
+}
+
+
+
+
+.item_left{
+    float:left;
+    margin-top:15px;
+    width:317.5px;
+    height: 317.5px;
+    background-color: #919191;
+    border: 1px solid lightgrey;
+}
+
+
+.item_right{
+    float:left;
+    margin-top:15px;
+    width:317.5px;
+    height: 317.5px;
+    background-color: #919191;
+    border: 1px solid lightgrey;
+}
+
+.item_bottom{
+    margin-top:15px;
+    width:640px;
+    height: 110px;
+    /*background-color: #383838;*/
+    /*background-color: white;*/
+}
+
+
+
+#lf {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+}
+
+#ft {
+    background: #000;
+    padding: 20px 15px;
+    text-align: left;
+}
+
+#ft > div > a {
+    color:white;
+}
+
+#ft_company {
+    text-align: center;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: -5px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ababab;
+}
+#ft_company a {
+    display:inline-block;
+    color: #fcfcfc;
+    margin-right: 1.4em;
+}
+#ft_company a:last-child{
+    margin-right: 0;
+}
+
+
+
+
+.footer{
+    color:white;
+    background: black;
+    width:640px;
+    height: 320px;
+    font-size: 11px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.footer > div > * {
+    color:white;
+}
+
+.ft_in{
+    margin-left:14px;
+}
+
+.footer > div >div > big > * {
+    color:white;
+}
+
+.footer > div >div > big > span > a > b {
+    color:white;
+}
+
+.list_sns {
+    overflow: hidden;
+    text-align: left;
+    display: block;
+    line-height: 0;
+}
+
+.list_sns li {
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 0;
+}
+

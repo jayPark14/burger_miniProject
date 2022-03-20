@@ -1,0 +1,47 @@
+.regterms{
+    margin:55px;
+    height:800px;
+}
+
+.reg_button{
+    text-align: center;
+    float:right;
+    width: 15%;
+    border-radius: 3px;
+    height: 30px;
+    margin: 15px;
+    font-size:19px;
+    font-weight: bold;
+    background: #000 !important;
+}
+
+.reg_button_text{
+    color:white;
+    /*text-align: center;*/
+}
+
+
+.terms_box {
+    padding: 15px !important;
+
+}
+
+.terms_box_border {
+    border: 1px solid #e2e2e2;
+}
+
+
+.terms_con {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+
+.terms_list {
+    padding: 100px 0 !important;
+    text-align: center !important;
+    box-shadow: none !important;
+    border: 1px solid #e2e2e2;
+    color: #c0c0c0 !important;
+}

@@ -1,0 +1,38 @@
+.register {
+    margin: 200px auto;
+    max-width: 500px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.reg_form{
+    width: 100%;
+    height:44px;
+    margin:1px;
+}
+.reg_label{
+}
+.reg_mail{
+    margin: 20px 0;
+}
+
+
+.input-group-text {
+    display: inline-block;
+    width: 90px;
+}
+
+
+
+
+.reg_reg {
+    width: 100%;
+    border-radius: 3px;
+    height: 40px;
+    margin: 30px 0;
+    font-size: 1.083em;
+    font-weight: bold;
+    background: #000 !important;
+    color: #fff;
+}

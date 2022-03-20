@@ -1,0 +1,164 @@
+/* 로그인 */
+
+a{
+    color:black;
+}
+
+#mb_login {
+    margin: 15px auto;
+    max-width: 500px;
+}
+
+
+#mb_login h1 {
+
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin: -15px -15px 0;
+    padding: 20px;
+    height: 60px;
+    /*border-bottom: 1px solid #e3e3e3;*/
+}
+
+#mb_login .login_menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 메뉴바 버튼모양 */
+#mb_login .login_menu ._btn {
+    flex: 1;
+    padding: 10px 0;
+    line-height: 1;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: -1px;
+}
+
+/* 메뉴바 검정색 지시선*/
+#mb_login .login_menu ._btn.active {
+    border-bottom: 3px solid #000;
+    font-weight: 500;
+    color: #000;
+}
+
+
+/*숨겨놓기*/
+.login_container > ._section {
+    display: none;
+}
+
+.login_container > ._section.active {
+    display: block;
+}
+
+
+#mb_login #login_frm {
+    position: relative
+}
+
+#login_id, #login_pw, #od_name, #od_id{
+    opacity: 0.8;
+}
+
+
+
+#mb_login .frm_input {
+    width: 100%;
+    margin: 0 0 10px;
+}
+
+#mb_login .btn_submit {
+    width: 100%;
+    border-radius: 3px;
+    height: 52px;
+    margin: 5px 0;
+    font-size: 1.083em;
+    font-weight: bold
+}
+
+#flogin {
+    margin: 0;
+}
+
+#mb_login_od_wr {
+    margin: 0;
+}
+
+
+/*폼*/
+.frm_input {
+    height: 40px;
+}
+
+/* input창 누르면 테두리 */
+input[type=text], input[type=password], textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+}
+
+/* input창 누르면 파란불*/
+input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus {
+    -webkit-box-shadow: 0 0 5px #9ed4ff;
+    -moz-box-shadow: 0 0 5px #9ed4ff;
+    box-shadow: 0 0 5px #9ed4ff;
+    border: 1px solid #558ab7 !important;
+}
+
+/* 비회원-확인 버튼*/
+#mb_login .btn_submit {
+    background: #000 !important;
+    color: #fff;
+}
+
+.mb_join_box{
+    border:1px solid black;
+    border-radius: 3px;
+    margin-top: 15px;
+    height: 50px;
+}
+
+
+/* 회원-확인 버튼*/
+#mb_login .btn_login {
+    width: 100%;
+    border-radius: 3px;
+    height: 52px;
+    font-size: 1.083em;
+    font-weight: bold;
+    background: #000 !important;
+    color: #fff;
+    margin-top: 15px;
+}
+
+
+.mb_join_btn{
+    width: 100%;
+}
+
+.pull-left{
+    margin-top:5px;
+    float:left;
+}
+
+.pull-right{
+    margin-top:5px;
+    float:right
+}
+
+
+
+
+.xIcon{
+    float:left;
+
+}
