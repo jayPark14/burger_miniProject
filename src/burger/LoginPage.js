@@ -97,10 +97,10 @@ function LoginUser() {
                 window.localStorage.setItem("userSession", data.id);
                 window.localStorage.setItem("deliDay", data.day);
                 sessionStorage.removeItem('cartCount');
-                // 본래 세션은 서버에서 관리해야 하지만 부득이하게 프론트에서도 관리하게 처리한다.
+                // 본래 세션은 서버에서 관리해야 하지만 연습 차원에서 프론트에서도 관리하게 처리한다.
                 console.log(window.localStorage)
                 // 로그인에 성공하면 페이지를 ./home으로 이동시켜준다.
-                // window.location.href = './home';
+                window.location.href = './home';
                 // document.location.href = '/home';
             }
         }).catch(function (error) {

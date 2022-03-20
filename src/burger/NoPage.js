@@ -8,7 +8,9 @@ function NoPage() {
         <>
             <h1>404</h1>
             <b>리액트 연습페이지</b>
-            <Header title="REACT"></Header>
+            <Header title="REACT" onCm={function () {
+                alert("Hello, React!")
+            }}></Header>
             <Nav topics={topicList}></Nav>
             <Article title="Welcome" body="Hello, 웹"></Article>
         </>
@@ -20,7 +22,11 @@ export default NoPage;
 
 function Header(props) {
     return <header>
-        <h1><a href="/">WEB</a></h1>
+        <h1><a href="/" onClick={(e) => { // 화살표 함수 한번 써봤고
+            e.preventDefault(); // prevent로 리다이렉트 막고
+            props.onCm(); // 함수 호출
+        }
+        }>{props.title}</a></h1>
     </header>
 }
 
