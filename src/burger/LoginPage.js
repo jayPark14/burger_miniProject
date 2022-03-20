@@ -81,6 +81,7 @@ function LoginUser() {
             // JSON 응답을 네이티브 JavaScript 오브젝트로 파싱
         }).then(function (response) {
             if (!response.ok) throw new Error();
+            console.log(response);
             // response.json() 메서드를 호출하면 JSON데이터를 javascript 객체로 변환한다.
             return response.json();
         }).then(function (data) {
@@ -89,17 +90,17 @@ function LoginUser() {
             // console.log(window.sessionStorage)
             // console.log(window.localStorage)
             // console.log(window.localStorage.getItem("id"))
-            if (data !== null) {
+            if (data.id !== null) {
                 alert("로그인 성공! ");
-                console.log(data);
+                console.log('ID : '+data.id);
                 // 로그인 성공시 반환되는 데이터가 1이면 localStorage에 입력한 id를 넣어준다.
-                window.localStorage.setItem("userSession", inputs.id);
-                window.localStorage.setItem("deliDay", data);
+                window.localStorage.setItem("userSession", data.id);
+                window.localStorage.setItem("deliDay", data.day);
                 sessionStorage.removeItem('cartCount');
                 // 본래 세션은 서버에서 관리해야 하지만 부득이하게 프론트에서도 관리하게 처리한다.
                 console.log(window.localStorage)
                 // 로그인에 성공하면 페이지를 ./home으로 이동시켜준다.
-                window.location.href = './home';
+                // window.location.href = './home';
                 // document.location.href = '/home';
             }
         }).catch(function (error) {
