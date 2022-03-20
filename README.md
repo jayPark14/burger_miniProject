@@ -1,3 +1,13 @@
+# Introduction to 바른버거
+
+## What is 바른버거
+#### 바른버거는 React 연습용 미니 프로젝트 입니다
+<details><summary> <b> 스택 </b> </summary>
+
+React, Spring Boot
+
+</details>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
