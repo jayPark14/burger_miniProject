@@ -96,7 +96,6 @@ function Footer() {
 }
 
 
-
 export default class Home extends Component {
     constructor(props) {
         super(props);
@@ -157,5 +156,4 @@ export default class Home extends Component {
             </>
         );
     }
-
 }

@@ -1,5 +1,21 @@
 import './Best.css';
 
+function Best() {
+    console.log("페이지 랜더 완료 : Best.js")
+    return (
+        <div className='best'>
+            <Intro/>
+            <Items/>
+        </div>
+    )
+}
+export default Best;
+
+
+
+
+/* 컴포넌트 */
+
 function Intro() {
     return (
         <div className="intro_best">
@@ -33,16 +49,3 @@ function Items() {
         </div>
     )
 }
-
-
-function Best() {
-    console.log("페이지 랜더 완료 : Best.js")
-    return (
-        <div className='best'>
-            <Intro/>
-            <Items/>
-        </div>
-    )
-}
-
-export default Best;

@@ -15,7 +15,19 @@ import burger_h from './image/bgg.png'
 import burger_i from './image/bgi.jpg'
 
 
-function MenuSelect(){
+function Select() {
+    return (
+        <div className="date_cont">
+            <MenuSelect/>
+            <ItemList/>
+        </div>
+    );
+}
+
+export default Select;
+
+
+function MenuSelect() {
 
     const [startDate, setStartDate] = useState(new Date());
 
@@ -29,7 +41,7 @@ function MenuSelect(){
         alert("날짜가 선택되었습니다. 상품을 선택해주세요.")
     }
 
-    return(
+    return (
         <div className="menu_select">
             <DatePicker
                 selected={startDate}
@@ -53,10 +65,7 @@ function MenuSelect(){
     )
 }
 
-
-
-function Select() {
-
+function ItemList() {
     const [count, setCount] = useState(0);
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
@@ -73,43 +82,39 @@ function Select() {
         window.sessionStorage.setItem("cartCount", counting)
         console.log(counting);
         console.log(window.sessionStorage)
-        alert("총"+counting+"개의 상품이 장바구니에 담겼습니다.")
+        alert("총" + counting + "개의 상품이 장바구니에 담겼습니다.")
         window.location.href = './select';
     }
 
-
-
     return (
-        <div className="date_cont">
-
-            <MenuSelect/>
-
+        <>
             <div className="item_line">
-            <div className="sl_item sl_left">
-                <div className="sl_item_image"><img src={burger_a}/></div>
-            <div className="sl_btn_box">
-                <button className="sl_btn" onClick={() => setCount(count + 1)}>
-                    +
-                </button>
-                <button className="sl_btn" onClick={() => setCount(count - 1)}>
-                    -
-                </button>
-                <div>구매수량 : {count}</div>
-            </div>
-            </div>
 
-            <div className="sl_item sl_right">
-                <div className="sl_item_image"><img src={burger_b}/></div>
-            <div className="sl_btn_box">
-                <button className="sl_btn" onClick={() => setCount1(count1 + 1)}>
-                    +
-                </button>
-                <button className="sl_btn" onClick={() => setCount1(count1 - 1)}>
-                    -
-                </button>
-                <div>구매수량 : {count1}</div>
-            </div>
-            </div>
+                <div className="sl_item sl_left">
+                    <div className="sl_item_image"><img src={burger_a}/></div>
+                    <div className="sl_btn_box">
+                        <button className="sl_btn" onClick={() => setCount(count + 1)}>
+                            +
+                        </button>
+                        <button className="sl_btn" onClick={() => setCount(count - 1)}>
+                            -
+                        </button>
+                        <div>구매수량 : {count}</div>
+                    </div>
+                </div>
+
+                <div className="sl_item sl_right">
+                    <div className="sl_item_image"><img src={burger_b}/></div>
+                    <div className="sl_btn_box">
+                        <button className="sl_btn" onClick={() => setCount1(count1 + 1)}>
+                            +
+                        </button>
+                        <button className="sl_btn" onClick={() => setCount1(count1 - 1)}>
+                            -
+                        </button>
+                        <div>구매수량 : {count1}</div>
+                    </div>
+                </div>
             </div>
 
             <div className="item_line">
@@ -185,7 +190,7 @@ function Select() {
                 <div className="sl_item sl_right">
                     <div className="sl_item_image"><img src={burger_f}/></div>
                     <div className="sl_btn_box">
-                        <button className="sl_btn" onClick={() => setCount7(count7+ 1)}>
+                        <button className="sl_btn" onClick={() => setCount7(count7 + 1)}>
                             +
                         </button>
                         <button className="sl_btn" onClick={() => setCount7(count7 - 1)}>
@@ -195,12 +200,7 @@ function Select() {
                     </div>
                 </div>
             </div>
-
-
             <div><Button className="select_cart_btn" onClick={intoCart}>장바구니 담기</Button></div>
-
-
-        </div>
-    );
-};
-export default Select;
+        </>
+    )
+}

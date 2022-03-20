@@ -4,11 +4,64 @@ import {GrClose} from "react-icons/gr";
 import {Button} from "react-bootstrap";
 import session from "./Session";
 
+
 const LoginPage = () => {
+    return (
+        <div className="">
+            <div id="mb_login">
+                <LoginHead/>
+                <LoginMenu/>
+
+                <div className="login_container">
+                    <LoginUser/>
+                    <LoginGuest/>
+                </div>
+            </div>
+        </div>
+    )
+}
+export default LoginPage;
+
+
+/* 컴포넌트 */
+
+/* 헤드 */
+function LoginHead() {
+    return (
+        <h1><a className="xIcon" href="./home"><GrClose size="20"/></a>로그인</h1>
+    )
+}
+
+
+/* 회원, 비회원 전환 */
+function LoginMenu() {
+    function loginmenu(id) {
+        document.getElementById('_section0').classList.add('active');
+        document.getElementById('_btn0').classList.add('active');
+        document.getElementById('_section1').classList.add('active');
+        document.getElementById('_btn1').classList.add('active');
+
+        if (id === 0) {
+            document.getElementById('_section1').classList.remove('active');
+            document.getElementById('_btn1').classList.remove('active');
+        } else {
+            document.getElementById('_section0').classList.remove('active');
+            document.getElementById('_btn0').classList.remove('active');
+        }
+    }
+
+    return (
+        <div className="login_menu">
+            <div id="_btn0" className="_btn active" onClick={() => loginmenu(0)}>회원</div>
+            <div id="_btn1" className="_btn" onClick={() => loginmenu(1)}>비회원</div>
+        </div>
+    )
+}
+
+/* 회원 로그인 */
+function LoginUser() {
 
     const [inputs, setInputs] = useState({id: "", password: ""});
-    const [ninputs, setNinputs] = useState({nid: "", ordernum: ""});
-
 
     const handleSubmit = (event) => {
         // console.log(inputs);
@@ -56,86 +109,12 @@ const LoginPage = () => {
         });
     }
 
-    const myHandelSubmit = (event) =>{
-        event.preventDefault();
-        fetch("http://localhost:8090/guest", {
-            method: 'post',
-            body: JSON.stringify(ninputs)
-        })
-            .then(res => res.json())
-            .then(function (data) {
-                console.log(ninputs+"data위치");
-                console.log(data);
-                // if (data === null) {
-                //     alert("비회원으로 로그인하셨습니다. ");
-                //     console.log(data);
-                // }
-            }).catch(function (error) {
-            console.log(error+"error발생");
-        });
-
-    }
-
-    const subHandleSubmit = (event) => {
-        console.log(ninputs);
-        event.preventDefault();
-        fetch("http://localhost:8090/guest", {
-            method: "post",
-            headers: {
-                "Access-Control-Allow-Origin": "*",
-                "Content-type": "application/json",
-                "Accept": "application/json"
-            },
-            body: JSON.stringify(ninputs)
-        }).then(function (response) {
-            if (!response.ok) throw new Error();
-            console.log(ninputs+"response위치");
-            return response.json();
-        }).then(function (data) {
-            console.log(ninputs+"data위치");
-            console.log(data);
-            if (data !== null) {
-                alert("비회원으로 로그인하셨습니다. ");
-                console.log(data);
-                // window.localStorage.setItem("guestSession", ninputs.nid);
-                window.location.href = './home';
-            }
-        }).catch(function (error) {
-            alert("비회원 로그인 실패, 주문자명과 주문번호를 확인하세요. ");
-            console.log(error+"error발생");
-        });
-    }
-
-
-
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
         setInputs(values => ({...values, [name]: value}))
     }
 
-    const subHandleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setNinputs(values => ({...values, [name]: value}))
-    }
-
-
-    /* 회원, 비회원 전환 */
-    function loginmenu(id) {
-        document.getElementById('_section0').classList.add('active');
-        document.getElementById('_btn0').classList.add('active');
-        document.getElementById('_section1').classList.add('active');
-        document.getElementById('_btn1').classList.add('active');
-
-        if (id === 0) {
-            document.getElementById('_section1').classList.remove('active');
-            document.getElementById('_btn1').classList.remove('active');
-        } else {
-            document.getElementById('_section0').classList.remove('active');
-            document.getElementById('_btn0').classList.remove('active');
-        }
-    }
 
     //password type 변경용 state
     const [passwordType, setPasswordType] = useState({
@@ -157,97 +136,131 @@ const LoginPage = () => {
         window.localStorage.setItem("userSession", inputs.id);
     }
 
-
-
     return (
-        <div className="">
-            <div id="mb_login" className="">
-                <h1>
-                    <a className="xIcon" href="./home"><GrClose size="20"/> </a>
-                    로그인 </h1>
+        <div id="_section0" className="_section active">
+            <form onSubmit={handleSubmit} method="post" name="login" id="flogin">
+                <input type="hidden" name="url"/>
 
-                <div className="login_menu">
-                    <div id="_btn0" className="_btn active" onClick={() => loginmenu(0)}>회원</div>
-                    <div id="_btn1" className="_btn" onClick={() => loginmenu(1)}>비회원</div>
-                </div>
+                <div id="login_frm">
+                    <label htmlFor="login_id"/>
+                    <input type="text" name="id" id="login_id"
+                           placeholder=" 아이디(필수)" required=""
+                           className="frm_input" maxLength="20" value={inputs.id} onChange={handleChange}/>
 
-                <div className="login_container">
-                    <div id="_section0" className="_section active">
-                        <form onSubmit={handleSubmit} method="post" name="login" id="flogin">
-                            <input type="hidden" name="url"/>
+                    <label htmlFor="login_pw"/>
+                    <input type={passwordType.type} name="password" id="login_pw" placeholder=" 비밀번호(필수)"
+                           required="" className="frm_input" maxLength="20" value={inputs.password}
+                           onChange={handleChange}/>
 
-                            <div id="login_frm">
-                                <label htmlFor="login_id"/>
-                                <input type="text" name="id" id="login_id"
-                                       placeholder=" 아이디(필수)" required=""
-                                       className="frm_input" maxLength="20" value={inputs.id} onChange={handleChange}/>
+                    <div className="pull">
 
-                                <label htmlFor="login_pw"/>
-                                <input type={passwordType.type} name="password" id="login_pw" placeholder=" 비밀번호(필수)"
-                                       required="" className="frm_input" maxLength="20" value={inputs.password}
-                                       onChange={handleChange}/>
-
-                                <div className="pull">
-
-                                    <div className="pull-left">
+                        <div className="pull-left">
                                 <span onClick={handlePasswordType}>
             	{passwordType.visible ? <div><input type="checkbox"/> 보이기 해체</div> :
                     <div><input type="checkbox"/> 비밀번호 보이기</div>}
             </span>
-                                    </div>
-
-                                    <div className="pull-right">
-                                        <input type="checkbox" name="auto_login" id="login_auto_login"
-                                               onClick={autoLogin}/>
-                                        <label htmlFor="login_auto_login">&nbsp;자동로그인</label>
-                                    </div>
-                                </div>
-
-
-                                <input type="submit" value="로그인" className="btn_login"/>
-                            </div>
-
-                            <section className="">
-
-                                <div  className="mb_join_box">
-                                        <Button href="./regterms" variant="" size="lg" className="mb_join_btn">
-                                            회원가입
-                                        </Button>
-                                </div>
-                            </section>
-
-
-                        </form>
-                    </div>
-
-
-                    <div id="_section1" className="_section">
-
-                        <div id="mb_login_od_wr">
-
-                            <form  onSubmit={myHandelSubmit} name="" method="post" action="" autoComplete="off">
-
-                                <label htmlFor="od_name" className="od_name"/>
-                                <input type="text" name="nid" id="od_name" placeholder=" 주문자명"
-                                       required="" className="frm_input required" size="20" value={ninputs.nid}  onChange={subHandleChange}/>
-                                <label htmlFor="od_id" className="od_id"/>
-                                <input type="text" name="ordernum" id="od_id" placeholder=" 주문번호"
-                                       required="" className="frm_input required" size="20" value={ninputs.ordernum}  onChange={subHandleChange}/>
-                                <input type="submit" value="확인" className="btn_submit"/>
-
-                            </form>
-
                         </div>
 
-
+                        <div className="pull-right">
+                            <input type="checkbox" name="auto_login" id="login_auto_login"
+                                   onClick={autoLogin}/>
+                            <label htmlFor="login_auto_login">&nbsp;자동로그인</label>
+                        </div>
                     </div>
+
+
+                    <input type="submit" value="로그인" className="btn_login"/>
                 </div>
 
+                <section className="">
 
-            </div>
+                    <div className="mb_join_box">
+                        <Button href="./regterms" variant="" size="lg" className="mb_join_btn">
+                            회원가입
+                        </Button>
+                    </div>
+                </section>
+            </form>
         </div>
-
     )
 }
 
-export default LoginPage;
+
+/* 비회원 로그인 */
+function LoginGuest() {
+
+    const [ninputs, setNinputs] = useState({nid: "", ordernum: ""});
+
+
+    const myHandelSubmit = (event) => {
+        event.preventDefault();
+        fetch("http://localhost:8090/guest", {
+            method: 'post',
+            body: JSON.stringify(ninputs)
+        })
+            .then(res => res.json())
+            .then(function (data) {
+                console.log(ninputs + "data위치");
+                console.log(data);
+                // if (data === null) {
+                //     alert("비회원으로 로그인하셨습니다. ");
+                //     console.log(data);
+                // }
+            }).catch(function (error) {
+            console.log(error + "error발생");
+        });
+
+    }
+
+    const subHandleSubmit = (event) => {
+        console.log(ninputs);
+        event.preventDefault();
+        fetch("http://localhost:8090/guest", {
+            method: "post",
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Content-type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(ninputs)
+        }).then(function (response) {
+            if (!response.ok) throw new Error();
+            console.log(ninputs + "response위치");
+            return response.json();
+        }).then(function (data) {
+            console.log(ninputs + "data위치");
+            console.log(data);
+            if (data !== null) {
+                alert("비회원으로 로그인하셨습니다. ");
+                console.log(data);
+                // window.localStorage.setItem("guestSession", ninputs.nid);
+                window.location.href = './home';
+            }
+        }).catch(function (error) {
+            alert("비회원 로그인 실패, 주문자명과 주문번호를 확인하세요. ");
+            console.log(error + "error발생");
+        });
+    }
+    const subHandleChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setNinputs(values => ({...values, [name]: value}))
+    }
+    return (
+        <div id="_section1" className="_section">
+            <div id="mb_login_od_wr">
+                <form onSubmit={myHandelSubmit} name="" method="post" action="" autoComplete="off">
+                    <label htmlFor="od_name" className="od_name"/>
+                    <input type="text" name="nid" id="od_name" placeholder=" 주문자명"
+                           required="" className="frm_input required" size="20" value={ninputs.nid}
+                           onChange={subHandleChange}/>
+                    <label htmlFor="od_id" className="od_id"/>
+                    <input type="text" name="ordernum" id="od_id" placeholder=" 주문번호"
+                           required="" className="frm_input required" size="20" value={ninputs.ordernum}
+                           onChange={subHandleChange}/>
+                    <input type="submit" value="확인" className="btn_submit"/>
+                </form>
+            </div>
+        </div>
+    )
+}
