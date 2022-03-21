@@ -80,15 +80,13 @@ function Footer() {
                 <div className="ft_in">
                     <span>프로젝트명 : 바른버거</span><br/>
                     <span>대표 : jayPark14</span><br/>
-                    <span>주소 : https://github.com/jayPark14</span><br/>
+                    <span>주소 : <a href="https://github.com/jayPark14">https://github.com/jayPark14</a></span><br/>
                     <span>연락처 : 010-xxxx-xxxx</span><br/>
                     <span></span><br/>
-                    <span></span><br/>
-                    <span></span><br/><br/>
                     <div>
                         <big>
-                            <span>고객센터 : <a href="tel:1234-5678"> <b>1234-5678</b></a></span><br/>
-                            <small>평일 09:00~18:00(주말 및 공휴일 off)</small>
+                            <span>고객센터 : <a href="tel:1110-1110"> 1110-1110</a></span><br/>
+                            <small>평일 09:00~24:00 (주말 및 공휴일 off)</small>
                         </big>
                     </div>
                     <div className="copyright">

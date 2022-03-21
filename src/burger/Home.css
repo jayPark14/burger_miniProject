@@ -88,6 +88,11 @@
     border: 1px solid lightgrey;
 }
 
+.item_left > a> img {
+    width:315px;
+    height:315px;
+}
+
 
 .item_right{
     float:left;
@@ -97,6 +102,13 @@
     background-color: #919191;
     border: 1px solid lightgrey;
 }
+
+.item_right > a> img {
+    width:315px;
+    height:315px;
+}
+
+
 
 .item_bottom{
     margin-top:15px;
@@ -162,11 +174,20 @@
     margin-left:14px;
 }
 
+.ft_in>span{
+    font-size:12px;
+}
+
+.ft_in>span > a{
+    font-size:14px;
+    color:white;
+}
+
 .footer > div >div > big > * {
     color:white;
 }
 
-.footer > div >div > big > span > a > b {
+.footer > div >div > big > span > a  {
     color:white;
 }
 
