@@ -87,11 +87,10 @@ function Footer() {
                     <span></span><br/><br/>
                     <div>
                         <big>
-                            <span>고객센터 : <a href="tel:1234-5678"> <b>1234-5678</b></a></span>
+                            <span>고객센터 : <a href="tel:1234-5678"> <b>1234-5678</b></a></span><br/>
                             <small>평일 09:00~18:00(주말 및 공휴일 off)</small>
                         </big>
                     </div>
-                    <br/>
                     <div className="copyright">
                         Copyright © 2022 바른버거 주식회사. All Rights Reserved.
                     </div>

@@ -160,7 +160,7 @@ const Navigation = ({width = 400}) => {
                                 <div className="_item">
 
                                     <div className="card-header">
-                                        <a className="card-link no_collapse" href="">스토리</a>
+                                        <a className="card-link no_collapse" href="">&nbsp;&nbsp;스토리</a>
                                     </div>
 
 
@@ -215,7 +215,7 @@ const Navigation = ({width = 400}) => {
                                 <div className="_item">
                                     <div className="card-header no-border">
                                         <a className="card-link no_collapse" href="">
-                                            이벤트
+                                            &nbsp;&nbsp;이벤트
                                         </a>
                                     </div>
                                 </div>

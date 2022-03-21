@@ -194,12 +194,19 @@
 }
 
 .sidebar_btn {
-    margin : 80px 40px 0 40px;
+    /*margin : 80px 40px 0 40px;*/
+    margin-top:80px;
+    margin-bottom: 20px;
+    /*margin-left:40px;*/
+    /*padding:20px;*/
+    display: flex;
 }
 
 .sb_btn1, .sb_btn3 {
     border: 1px solid black;
     width: 155px;
+    margin: 0 20px 0 33px;
+    /*margin: 0 20px;*/
     background-color: white;
     
 }
@@ -348,11 +355,11 @@
 
 /* 슬라이드메뉴 부트스트랩 아코디언 색상 변경*/
 .panel-header button {
-    border: none;
-    background: transparent;
+    /*border: none;*/
+    /*background: transparent;*/
 }
 .panel-header button:focus {
     background-color: white;
-    outline: 0px auto -webkit-focus-ring-color;
-    border:none;
+    /*outline: 0px auto -webkit-focus-ring-color;*/
+    border:none !important;
 }

@@ -56,7 +56,7 @@ function MenuSelect() {
                         : 'normal-day'
                 }
                 customInput={		      // 날짜 뜨는 인풋 커스텀
-                    <Form.Control as="textarea" rows={1} style={{width: "250px"}}/>
+                    <Form.Control as="textarea" rows={1} style={{width: "248px"}}/>
                 }
             />
 
@@ -147,7 +147,7 @@ function ItemList() {
 
             <div className="item_line">
                 <div className="sl_item sl_left">
-                    <div className="sl_item_image"><img src={burger_h}/></div>
+                    <div className="sl_item_image"><img src={burger_g}/></div>
                     <div className="sl_btn_box">
                         <button className="sl_btn" onClick={() => setCount4(count4 + 1)}>
                             +
@@ -160,7 +160,7 @@ function ItemList() {
                 </div>
 
                 <div className="sl_item sl_right">
-                    <div className="sl_item_image"><img src={burger_i}/></div>
+                    <div className="sl_item_image"><img src={burger_f}/></div>
                     <div className="sl_btn_box">
                         <button className="sl_btn" onClick={() => setCount5(count5 + 1)}>
                             +
@@ -175,7 +175,7 @@ function ItemList() {
 
             <div className="item_line">
                 <div className="sl_item sl_left">
-                    <div className="sl_item_image"><img src={burger_g}/></div>
+                    <div className="sl_item_image"><img src={burger_h}/></div>
                     <div className="sl_btn_box">
                         <button className="sl_btn" onClick={() => setCount6(count6 + 1)}>
                             +
@@ -188,7 +188,7 @@ function ItemList() {
                 </div>
 
                 <div className="sl_item sl_right">
-                    <div className="sl_item_image"><img src={burger_f}/></div>
+                    <div className="sl_item_image"><img src={burger_h}/></div>
                     <div className="sl_btn_box">
                         <button className="sl_btn" onClick={() => setCount7(count7 + 1)}>
                             +

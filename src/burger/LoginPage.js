@@ -172,15 +172,9 @@ function LoginUser() {
 
                     <input type="submit" value="로그인" className="btn_login"/>
                 </div>
-
-                <section className="">
-
-                    <div className="mb_join_box">
                         <Button href="./regterms" variant="" size="lg" className="mb_join_btn">
                             회원가입
                         </Button>
-                    </div>
-                </section>
             </form>
         </div>
     )

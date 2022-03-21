@@ -57,7 +57,7 @@ function MemberHead(){
                           </span>
                     </span>
                 </div>
-                <div className="log_text">로그인 아이디 : <big className="">{userSession}</big> </div>
+                <div className="log_text">안녕하세요! <big className="">{userSession}</big> 님</div>
             </div>
         </section>
     )
