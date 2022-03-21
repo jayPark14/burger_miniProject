@@ -28,10 +28,10 @@ function Slide() {
                 autoplay={{delay: 4000}}
             >
                 {/*<SwiperSlide></SwiperSlide>*/}
-                <SwiperSlide><a herf="#"><img src={main_d}/></a></SwiperSlide>
-                <SwiperSlide><a herf="#"><img src={main_a}/></a></SwiperSlide>
-                <SwiperSlide><a herf="#"><img src={main_b}/></a></SwiperSlide>
-                <SwiperSlide><a herf="#"><img src={main_c}/></a></SwiperSlide>
+                {/*<SwiperSlide><a herf="#"><img src={main_d}/></a></SwiperSlide>*/}
+                {/*<SwiperSlide><a herf="#"><img src={main_a}/></a></SwiperSlide>*/}
+                {/*<SwiperSlide><a herf="#"><img src={main_b}/></a></SwiperSlide>*/}
+                {/*<SwiperSlide><a herf="#"><img src={main_c}/></a></SwiperSlide>*/}
             </Swiper>
         </div>
     );
@@ -44,15 +44,21 @@ function Knee() {
             <section id="lf">
                 <div className="item_left">
                     <a herf="#"></a>
-                    <a herf="#"><img src={home_left}/></a>
+                    <a herf="#">
+                        {/*<img src={home_left}/>*/}
+                    </a>
                 </div>
                 <div className="item_right">
                     <a herf="#"></a>
-                    <a herf="#"><img src={home_right}/></a>
+                    <a herf="#">
+                        {/*<img src={home_right}/>*/}
+                    </a>
                 </div>
             </section>
             <div className="item_bottom">
-                <a herf="#"><img src={home_bottom}/></a>
+                <a herf="#">
+                    {/*<img src={home_bottom}/>*/}
+                </a>
             </div>
         </>
     )
@@ -72,13 +78,13 @@ function Footer() {
             </div>
             <div className="footer">
                 <div className="ft_in">
-                    <span>회사명 : 바른버거 주식회사 </span>
-                    <span> 대표 : 홍길동</span><br/>
-                    <span>주소 : 서울시 은평구 갈현동</span><br/>
-                    <span>팩스 : 02-1234-5678</span><br/>
-                    <span>사업자 등록번호 : 110-14-45678</span><br/>
-                    <span>통신판매업신고번호 : 2022-2220호</span><br/>
-                    <span>개인정보 보호책임자 : 홍길동</span><br/><br/>
+                    <span>프로젝트명 : 바른버거</span><br/>
+                    <span>대표 : jayPark14</span><br/>
+                    <span>주소 : https://github.com/jayPark14</span><br/>
+                    <span>연락처 : 010-xxxx-xxxx</span><br/>
+                    <span></span><br/>
+                    <span></span><br/>
+                    <span></span><br/><br/>
                     <div>
                         <big>
                             <span>고객센터 : <a href="tel:1234-5678"> <b>1234-5678</b></a></span>
@@ -103,8 +109,6 @@ export default class Home extends Component {
         this.state = {hours: 0, minutes: 0, seconds: 0};
         this.timer = null;
         this.deadline = null;
-        // this.deliDay = null;
-        // this.userSession = null;
     }
 
     count() {

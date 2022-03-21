@@ -75,13 +75,9 @@
     font-size:21px;
 }
 
-
 .remaining_time_box > a > b{
     font-size:23px;
 }
-
-
-
 
 .item_left{
     float:left;
@@ -106,7 +102,7 @@
     margin-top:15px;
     width:640px;
     height: 110px;
-    /*background-color: #383838;*/
+    background-color: #383838;
     /*background-color: white;*/
 }
 

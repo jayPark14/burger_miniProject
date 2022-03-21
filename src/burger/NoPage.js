@@ -10,9 +10,11 @@ function NoPage() {
             <b>리액트 연습페이지</b>
             <Header title="REACT" onCm={function () {
                 alert("Hello, React!")
-            }}></Header>
-            <Nav topics={topicList}></Nav>
-            <Article title="Welcome" body="Hello, 웹"></Article>
+            }}/>
+            <Nav topics={topicList} onChangeMode={id => {
+                alert(id + "번 아이디")
+            }}/>
+            <Article title="Welcome" body="Hello, 웹"/>
         </>
     )
 }
@@ -32,12 +34,12 @@ function Header(props) {
 
 function Nav(propOk) {
     const list = []
-    console.log(propOk)
-    console.log(propOk.topics)
-    console.log(propOk.topics.length)
     for (let i = 0; i < propOk.topics.length; i++) {
         let t = propOk.topics[i];
-        list.push(<li key={t.id}><a href={'/read/' + t.id}>{t.title}</a></li>)
+        list.push(<li key={t.id}><a id={t.id} href={'/read/' + t.id} onClick={event => {
+            event.preventDefault();
+            propOk.onChangeMode(event.target.id); //이벤트를 유발시킨 태그를 target으로 id를 가져온다
+        }}>{t.title}</a></li>)
     }
     return <nav>
         <ol>
