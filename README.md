@@ -17,11 +17,13 @@
 
 
 ## 목차
-### [1. 프로젝트 소개](#프로젝트-소개)
-### [2. 본인 소개](#본인-소개)
-### [3. 구성](#구성)
-
-
+### 1. 프로젝트 소개
+### 2. 본인 소개
+### 3. 구성
+- 3-1 [메인화면](#메인화면)
+- 3-2 [회원가입](#회원가입)
+- 3-3 [로그인 / 로그아웃](#로그인-/-로그아웃)
+- 3-4 [장바구니 담기](#장바구니-담기)
 <br>
 
 ***
@@ -33,24 +35,26 @@
 
 - 기획 배경 및 목적 
 : 프론트 미니 프로젝트
-
+<br><br><br><br>
 # 본인 소개
 
 [<img width="30" src="https://user-images.githubusercontent.com/74857433/114282246-b567cb80-9a7d-11eb-9bfe-8982f04e1cfc.png" />](https://github.com/jayPark14) 멀티캠퍼스에서 수강중...
 
 
 
-
+<br><br><br>
 # 구성
-1. **메인화면**
+1. **메인 화면**
 <br><br>
 ![burger_mini](https://user-images.githubusercontent.com/100342241/159518342-b72e7282-d9ce-45a2-b7b1-ca6c784072fb.gif)
 - 메인 페이지의 UI 입니다. 
-<br><br>
+<br><br><br>
 2. 회원가입
 ![회원가입](https://user-images.githubusercontent.com/100342241/159522430-d9b337e4-1e26-4a31-a452-018b08928fe6.gif)
-- 회원가입 페이지 
+- 회원가입 페이지
+<br><br><br>
 3. 로그인 / 로그아웃
 ![로그인](https://user-images.githubusercontent.com/100342241/159522674-c59a4661-b1bc-43f2-890c-a303b377d916.gif)
 - 로그인시 나타나는 기본 등급
+<br><br><br>
 4. 장바구니 담기
