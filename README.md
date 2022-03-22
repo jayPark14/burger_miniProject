@@ -6,13 +6,13 @@
 
 이 README도 연습용 입니다
 
-<br>
-<details><summary> <b> 스택 </b> </summary><br>
-<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">&nbsp
-<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">&nbsp
-<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">&nbsp
+
+###사용 스택
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">&nbsp;
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">&nbsp;
+<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">&nbsp;
 <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white">
-</details>
+
 
 
 ## 목차
@@ -43,7 +43,7 @@
 # 구성
 1. **메인화면**
 <br><br>
-![burger11](https://user-images.githubusercontent.com/100342241/159516051-bb32ad56-03bd-4331-ac92-695768e7be28.gif)
+![burger_mini](https://user-images.githubusercontent.com/100342241/159518342-b72e7282-d9ce-45a2-b7b1-ca6c784072fb.gif)
 <br><br>
 2. 회원가입
 3. 로그인 / 로그아웃 
