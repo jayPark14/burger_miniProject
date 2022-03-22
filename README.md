@@ -35,14 +35,14 @@
 
 - 기획 배경 및 목적 
 : 프론트 미니 프로젝트
-<br><br><br><br>
+<br><br><br>
 # 본인 소개
 
 [<img width="30" src="https://user-images.githubusercontent.com/74857433/114282246-b567cb80-9a7d-11eb-9bfe-8982f04e1cfc.png" />](https://github.com/jayPark14) 멀티캠퍼스에서 수강중...
 
 
 
-<br><br><br>
+<br><br>
 # 구성
 1. **메인 화면**
 <br><br>
