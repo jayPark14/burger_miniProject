@@ -17,6 +17,11 @@
 .home_wrap{
 }
 
+.slide_image > a>img{
+    width: 640px;
+    height: 360px;
+}
+
 
 /*.slide_box{*/
 /*    margin-top:55px;*/
@@ -41,6 +46,8 @@
 
 
 .remaining_time_box{
+    padding-top:12px;
+    padding-left: 10px;
     /*display: flex;*/
     background-image: url("./image/deli.jpg");
     margin-top:10px;
@@ -84,8 +91,8 @@
     margin-top:15px;
     width:317.5px;
     height: 317.5px;
-    background-color: #919191;
-    border: 1px solid lightgrey;
+    /*background-color: #919191;*/
+    /*border: 1px solid lightgrey;*/
 }
 
 .item_left > a> img {
@@ -99,8 +106,8 @@
     margin-top:15px;
     width:317.5px;
     height: 317.5px;
-    background-color: #919191;
-    border: 1px solid lightgrey;
+    /*background-color: #919191;*/
+    /*border: 1px solid lightgrey;*/
 }
 
 .item_right > a> img {
@@ -118,6 +125,11 @@
     /*background-color: white;*/
 }
 
+.item_bottom > a > img{
+    overflow: hidden;
+    height:110px;
+    width: 640px;
+}
 
 
 #lf {

@@ -3,13 +3,13 @@ import SwiperCore, {Navigation, Pagination, Autoplay} from "swiper";	// 추가
 import 'swiper/scss'
 import 'swiper/scss/navigation'
 import 'swiper/scss/pagination'
-import main_a from './image/coffe.jpg'
-import main_b from './image/home_slide4.jpg'
-import main_c from './image/home_slide2.jpg'
-import main_d from './image/home.png'
-import home_left from './image/home_left.jpg'
-import home_right from './image/home_right.png'
-import home_bottom from './image/home_bottom.jpg'
+import main_a from './image/aaa.jpg'
+import main_b from './image/slidea.png'
+import main_c from './image/slidey.jpg'
+import main_d from './image/title.png'
+import home_left from './image/left.png'
+import home_right from './image/drink.jpg'
+import home_bottom from './image/adf.png'
 
 import './Home.css'
 import {Component} from "react";
@@ -28,10 +28,10 @@ function Slide() {
                 autoplay={{delay: 4000}}
             >
                 {/*<SwiperSlide></SwiperSlide>*/}
-                {/*<SwiperSlide><a herf="#"><img src={main_d}/></a></SwiperSlide>*/}
-                {/*<SwiperSlide><a herf="#"><img src={main_a}/></a></SwiperSlide>*/}
-                {/*<SwiperSlide><a herf="#"><img src={main_b}/></a></SwiperSlide>*/}
-                {/*<SwiperSlide><a herf="#"><img src={main_c}/></a></SwiperSlide>*/}
+                <SwiperSlide className="slide_image"><a herf="#"><img src={main_d}/></a></SwiperSlide>
+                <SwiperSlide className="slide_image"><a herf="#"><img src={main_c}/></a></SwiperSlide>
+                <SwiperSlide className="slide_image"><a herf="#"><img src={main_b}/></a></SwiperSlide>
+                <SwiperSlide className="slide_image"><a herf="#"><img src={main_a}/></a></SwiperSlide>
             </Swiper>
         </div>
     );
@@ -45,19 +45,19 @@ function Knee() {
                 <div className="item_left">
                     <a herf="#"></a>
                     <a herf="#">
-                        {/*<img src={home_left}/>*/}
+                        <img src={home_left}/>
                     </a>
                 </div>
                 <div className="item_right">
                     <a herf="#"></a>
                     <a herf="#">
-                        {/*<img src={home_right}/>*/}
+                        <img src={home_right}/>
                     </a>
                 </div>
             </section>
             <div className="item_bottom">
                 <a herf="#">
-                    {/*<img src={home_bottom}/>*/}
+                    <img src={home_bottom}/>
                 </a>
             </div>
         </>
@@ -79,9 +79,9 @@ function Footer() {
             <div className="footer">
                 <div className="ft_in">
                     <span>프로젝트명 : 바른버거</span><br/>
-                    <span>대표 : jayPark14</span><br/>
+                    <span>제작 : Jay</span><br/>
                     <span>주소 : <a href="https://github.com/jayPark14">https://github.com/jayPark14</a></span><br/>
-                    <span>연락처 : 010-xxxx-xxxx</span><br/>
+                    <span>연락처 : 010-1110-1110</span><br/>
                     <span></span><br/>
                     <div>
                         <big>
@@ -123,7 +123,7 @@ export default class Home extends Component {
     }
 
     componentDidMount() {
-        this.deadline = new Date("2022-02-17T18:00:00").getTime();
+        this.deadline = new Date("2022-03-23T18:00:00").getTime();
         this.timer = setInterval(this.count, 1000);
     }
 
@@ -146,7 +146,7 @@ export default class Home extends Component {
                         </big>
                         <span> 내 주문하면</span><br/>
                         <b>
-                            2/18(금) 오전 7시 전 도착!
+                            3/24(목) 오전 7시 전 도착!
                         </b>
                     </a>
                     <div className="remain_anne"><b>배송안내 > </b></div>

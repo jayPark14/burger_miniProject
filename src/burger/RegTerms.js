@@ -18,7 +18,7 @@ export default RegTerms;
 /* 컴포넌트 */
 function AllConsent(){
     return(
-        <div><input type="checkbox"/>전체 동의</div>
+        <div className="allCheck"><input type="checkbox"/>전체 동의</div>
     )
 }
 
@@ -33,7 +33,7 @@ function RegConsent(){
                 <ul className="terms_con">
                     <li className="terms_list">서비스 이용약관</li>
                 </ul>
-                <div><input type="checkbox"/>회원가입약관의 내용에 동의합니다.</div>
+                <div className="topCheck"><input type="checkbox"/>회원가입약관의 내용에 동의합니다.</div>
 
             </div>
         </section>
@@ -51,7 +51,7 @@ function UserInfoConsent(){
                 <ul className="terms_con">
                     <li className="terms_list">항목 및 보유기간</li>
                 </ul>
-                <div><input type="checkbox"/>개인정보처리방침안내의 내용에 동의합니다.</div>
+                <div className="bottomCheck"><input type="checkbox"/>개인정보처리방침안내의 내용에 동의합니다.</div>
 
             </div>
         </section>
@@ -61,7 +61,7 @@ function UserInfoConsent(){
 function RegButton(){
     return(
         <section className="reg_button">
-            <div>
+            <div className="reg_in">
                 <a href="./register"
                    className="reg_button_text">회원가입</a>
             </div>

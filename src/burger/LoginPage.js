@@ -64,7 +64,7 @@ function LoginUser() {
     const [inputs, setInputs] = useState({id: "", password: ""});
 
     const handleSubmit = (event) => {
-        // console.log(inputs);
+        console.log(inputs);
         event.preventDefault();
         fetch("http://localhost:8090/login", {
             method: "post",
@@ -186,30 +186,10 @@ function LoginGuest() {
 
     const [ninputs, setNinputs] = useState({nid: "", ordernum: ""});
 
-
-    const myHandelSubmit = (event) => {
-        event.preventDefault();
-        fetch("http://localhost:8090/guest", {
-            method: 'post',
-            body: JSON.stringify(ninputs)
-        })
-            .then(res => res.json())
-            .then(function (data) {
-                console.log(ninputs + "data위치");
-                console.log(data);
-                // if (data === null) {
-                //     alert("비회원으로 로그인하셨습니다. ");
-                //     console.log(data);
-                // }
-            }).catch(function (error) {
-            console.log(error + "error발생");
-        });
-
-    }
-
     const subHandleSubmit = (event) => {
-        console.log(ninputs);
+        console.log("프론트에서 여기까지는 가져오네:"+ninputs);
         event.preventDefault();
+        console.log(ninputs);
         fetch("http://localhost:8090/guest", {
             method: "post",
             headers: {
@@ -220,15 +200,16 @@ function LoginGuest() {
             body: JSON.stringify(ninputs)
         }).then(function (response) {
             if (!response.ok) throw new Error();
-            console.log(ninputs + "response위치");
-            return response.json();
+            console.log(response);
+                return response.json();
         }).then(function (data) {
             console.log(ninputs + "data위치");
-            console.log(data);
-            if (data !== null) {
+            console.log(data.ordernum);
+            if (data.ordernum !== null) {
                 alert("비회원으로 로그인하셨습니다. ");
-                console.log(data);
-                // window.localStorage.setItem("guestSession", ninputs.nid);
+                console.log("슈슈슉:"+data.ordernum);
+                console.log(data.ordernum);
+                window.localStorage.setItem("guestSession", ninputs.nid);
                 window.location.href = './home';
             }
         }).catch(function (error) {
@@ -244,7 +225,7 @@ function LoginGuest() {
     return (
         <div id="_section1" className="_section">
             <div id="mb_login_od_wr">
-                <form onSubmit={myHandelSubmit} name="" method="post" action="" autoComplete="off">
+                <form onSubmit={subHandleSubmit} name="guest" method="post">
                     <label htmlFor="od_name" className="od_name"/>
                     <input type="text" name="nid" id="od_name" placeholder=" 주문자명"
                            required="" className="frm_input required" size="20" value={ninputs.nid}
