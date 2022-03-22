@@ -92,7 +92,7 @@ function Register() {
 
     return (
         <div className="register">
-
+                <div style={{'text-align':'center','margin-bottom':'40px'}}><h1>회원 가입</h1></div>
             <form action={'./home'} onSubmit={handleSubmit}>
 
                 <div className="">

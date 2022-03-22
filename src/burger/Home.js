@@ -146,7 +146,7 @@ export default class Home extends Component {
                         </big>
                         <span> 내 주문하면</span><br/>
                         <b>
-                            3/24(목) 오전 7시 전 도착!
+                            2/16(수) 오전 7시 전 도착!
                         </b>
                     </a>
                     <div className="remain_anne"><b>배송안내 > </b></div>
