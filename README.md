@@ -46,7 +46,7 @@
 # 구성
 1. **메인 화면**
 <br><br>
-![burger_mini](https://user-images.githubusercontent.com/100342241/159518342-b72e7282-d9ce-45a2-b7b1-ca6c784072fb.gif)
+![burger11](https://user-images.githubusercontent.com/100342241/159524267-2ccab85d-fee8-4563-a605-bf24286b0ce5.gif)
 - 메인 페이지의 UI 입니다. 
 <br><br><br>
 2. 회원가입
