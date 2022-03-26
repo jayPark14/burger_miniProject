@@ -46,18 +46,18 @@
 
 <br><br>
 # 구성
-###메인 화면
+**메인 화면**
 ![burger_mini](https://user-images.githubusercontent.com/100342241/159518342-b72e7282-d9ce-45a2-b7b1-ca6c784072fb.gif)
 - 메인 페이지의 UI
 <br><br><br>
-###회원가입
+**회원가입**
 ![회원가입](https://user-images.githubusercontent.com/100342241/159522430-d9b337e4-1e26-4a31-a452-018b08928fe6.gif)
 - 회원가입 페이지
 <br><br><br>
-###로그인 / 로그아웃
+**로그인 / 로그아웃**
 ![로그인](https://user-images.githubusercontent.com/100342241/159522674-c59a4661-b1bc-43f2-890c-a303b377d916.gif)
 - 로그인시 나타나는 기본 등급
 - 주문일자에 따라 다른 등급이 출력
 <br><br><br>
-###장바구니 담기
+**장바구니 담기**
 ![장바구니담기](https://user-images.githubusercontent.com/100342241/159598905-656425eb-12c9-433b-806d-ef0d062bffae.gif)
